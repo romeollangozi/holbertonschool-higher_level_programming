@@ -2,4 +2,3 @@
 a = "abcdefghijklmnopqrstuvwxyz"
 for letter in a:
     print(letter, end="")
-print()
