@@ -56,4 +56,4 @@ This is an example text file in reStructuredText format.
 	
 	>>> add_integer(float('nan'), 10)
 	Traceback (most recent call last):
-        ValueError: cannot convert float NaN to integer	
+        ValueError: cannot convert float NaN to integer
