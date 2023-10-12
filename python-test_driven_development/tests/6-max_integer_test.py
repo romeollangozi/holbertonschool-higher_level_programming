@@ -22,3 +22,10 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([-1, 3, 2, -4]), 3)
         self.assertAlmostEqual(max_integer([1, 5, 2.3, 5.7, 6.5]), 6.5)
         self.assertAlmostEqual(max_integer(), None)
+
+    def test_string(self):
+        """Checks max int(within the list a string)
+        """
+        _list = [1, 2, '3', 4]
+        with self.assertRaises(TypeError):
+            max_integer(_list)
