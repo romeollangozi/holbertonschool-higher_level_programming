@@ -7,7 +7,7 @@
 '''
 
 
-class Recatangle:
+class Rectangle:
     '''
         Rectangle class
     '''
