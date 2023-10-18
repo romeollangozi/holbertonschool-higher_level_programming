@@ -11,3 +11,4 @@ def to_json_string(my_obj):
     as a json string
     '''
     return dumps(my_obj)
+    return count
