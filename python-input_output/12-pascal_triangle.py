@@ -9,7 +9,7 @@ def pascal_triangle(n):
     Function to print pascal triangle
     '''
     if n <= 0:
-        return [0]
+        return []
     if n <= 1:
         return [[1]]
     triangle = pascal_triangle(n - 1)
