@@ -4,7 +4,6 @@ Module for demostrative purposes
 '''
 
 
-
 def class_to_json(obj):
     '''
     Function to convert an object
