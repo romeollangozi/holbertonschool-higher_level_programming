@@ -42,5 +42,5 @@ class Base:
             if isinstance(objs, Base):
                 list_of_dictionaries.append(objs.to_dictionary())
 
-        with open(f"{cls.__name__}.json", "w") as file_js:
+        with open(f"{cls.__name__}.json", "w+") as file_js:
             file_js.write(Base.to_json_string(list_of_dictionaries))
