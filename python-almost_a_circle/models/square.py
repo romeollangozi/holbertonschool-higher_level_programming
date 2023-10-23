@@ -24,6 +24,25 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        '''
+        Function to update the instance attributes
+        '''
+
+        if len(args) == 0:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+        for i, value in enumerate(args):
+            if i == 0:
+                self.id = args[i]
+            if i == 1:
+                self.size = args[i]
+            if i == 2:
+                self.x = args[i]
+            if i == 3:
+                self.y = args[i]
+
     def __str__(self):
         return f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y}\
  - {self.width}"
