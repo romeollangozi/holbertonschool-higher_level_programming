@@ -78,8 +78,11 @@ class Rectangle(Base):
         Function that displays the rectangle on
         the standart output
         '''
-
+        if self.y != 0:
+            print("\n" * (self.y - 1))
         for times in range(self.height):
+            if self.x != 0:
+                print(' ' * self.x, end="")
             print("#" * self.width)
 
     def __str__(self):
