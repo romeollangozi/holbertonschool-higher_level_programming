@@ -37,10 +37,13 @@ class Base:
         Class method to save json represantation of
         object files
         '''
-        list_of_dictionaries = []
-        for objs in list_objs:
-            if issubclass(objs.__class__, Base):
-                list_of_dictionaries.append(objs.to_dictionary())
 
         with open(f"{cls.__name__}.json", "w+") as file_js:
+            if list_objs is None:
+                file_js.write(json.dumps([]))
+                return
+            list_of_dictionaries = []
+            for objs in list_objs:
+                if issubclass(objs.__class__, Base):
+                    list_of_dictionaries.append(objs.to_dictionary())
             file_js.write(Base.to_json_string(list_of_dictionaries))
