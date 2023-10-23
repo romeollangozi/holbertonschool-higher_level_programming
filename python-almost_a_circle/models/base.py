@@ -5,6 +5,7 @@ Module for demostrattive purposes
 
 
 import json
+import os.path
 
 
 class Base:
@@ -71,3 +72,19 @@ class Base:
             new_instance = cls(1)
         new_instance.update(**dictionary)
         return new_instance
+
+    @classmethod
+    def load_from_file(cls):
+        '''
+        Function that returns a list of instances
+        '''
+        if os.path.isfile(f"{cls.__name__}.json"):
+            with open(f"{cls.__name__}.json") as text_json:
+                obj_dict = cls.from_json_string(text_json.read())
+                obj_list = []
+                for dictionaries in obj_dict:
+                    new_obj = cls.create(**dictionaries)
+                    obj_list.append(new_obj)
+                return obj_list
+        else:
+            return []
