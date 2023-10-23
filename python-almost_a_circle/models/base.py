@@ -47,3 +47,14 @@ class Base:
                 if issubclass(objs.__class__, Base):
                     list_of_dictionaries.append(objs.to_dictionary())
             file_js.write(Base.to_json_string(list_of_dictionaries))
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''
+        Function that returns the list
+        of the json_string representation
+        '''
+
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
