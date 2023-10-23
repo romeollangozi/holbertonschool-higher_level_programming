@@ -108,3 +108,11 @@ class Rectangle(Base):
                 self.x = args[i]
             if i == 4:
                 self.y = args[i]
+
+    def to_dictionary(self):
+        '''
+        Function to return dictionary
+        representation of a Rectangle
+        '''
+        return {"id": self.id, "width": self.width, "height": self.height,
+                "x": self.x, "y": self.y}
