@@ -65,8 +65,6 @@ class Base:
         Function that creates an instance
         from dictionary given
         '''
-        if dictionary is None or len(dictionary) == 0:
-            return
         new_instance = cls(1, 1)
         new_instance.update(**dictionary)
         return new_instance
