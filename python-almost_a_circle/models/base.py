@@ -39,7 +39,7 @@ class Base:
         '''
         list_of_dictionaries = []
         for objs in list_objs:
-            if isinstance(objs, Base):
+            if issubclass(objs.__class__, Base):
                 list_of_dictionaries.append(objs.to_dictionary())
 
         with open(f"{cls.__name__}.json", "w+") as file_js:
