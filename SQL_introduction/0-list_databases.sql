@@ -1,2 +1,2 @@
---show all databases min my sql
-show databases;
+-- show all databases in my sql
+SHOW DATABASES;
