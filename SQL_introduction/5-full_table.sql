@@ -1,2 +1,2 @@
---show table
+-- show table
 SHOW CREATE TABLE first_table;
