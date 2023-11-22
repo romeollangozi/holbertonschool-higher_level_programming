@@ -1,5 +1,5 @@
 -- task 13
-SELECT gen.name AS genre, COUNT(*) as number_of_shows FROM tv_shows
+SELECT gen.name AS genre, COUNT(*) AS number_of_shows FROM tv_shows
 JOIN tv_show_genres
 ON tv_show_genres.show_id=tv_shows.id
 JOIN tv_genres AS gen
