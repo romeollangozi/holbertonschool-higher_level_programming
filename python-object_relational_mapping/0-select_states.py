@@ -2,6 +2,7 @@
 import MySQLdb as db
 from sys import argv
 
+
 '''
 Simple module to make a connect to mysql server
 with MySQLdb library
