@@ -17,3 +17,6 @@ all_rows = cursor.fetchall()
 
 for row in all_rows:
     print(row)
+
+cursor.close()
+conn.close()
