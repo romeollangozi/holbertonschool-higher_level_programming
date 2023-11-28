@@ -9,14 +9,15 @@ with MySQLdb library
 '''
 
 
-conn = db.connect(host='localhost', port=3306, user=argv[1],
-                  passwd=argv[2], db=argv[3])
-cursor = conn.cursor()
-cursor.execute('SELECT * FROM states ORDER BY states.id')
-all_rows = cursor.fetchall()
+if __name__ == '__main__':
+    conn = db.connect(host='localhost', port=3306, user=argv[1],
+                      passwd=argv[2], db=argv[3])
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM states ORDER BY states.id')
+    all_rows = cursor.fetchall()
 
-for row in all_rows:
-    print(row)
+    for row in all_rows:
+        print(row)
 
-cursor.close()
-conn.close()
+    cursor.close()
+    conn.close()
